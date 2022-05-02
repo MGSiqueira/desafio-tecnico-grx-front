@@ -1,4 +1,4 @@
-export default function Questions1n2({ number, text, handle, answers }) {
+export default function Question1n2({ number, text, handle, answers }) {
   return (
     <div>
       <p>{ text }</p>
