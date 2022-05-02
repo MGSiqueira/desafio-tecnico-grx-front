@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import Question1n2 from "./Question1n2";
 import Question3 from "./Question3";
+import Question4 from "./Question4";
 
 const questionOne = 'Você se considera bom em lógica?';
 const questionTwo = 'Gosta de aprender com desafios?';
 
 export default function Form() {
-  const [answers, setAnswers] = useState({ 1: '', 2: '', 3: 'Sim' });
+  const [answers, setAnswers] = useState({ Pergunta1: '', Pergunta2: '',
+    Pergunta3: 'Sim', Pergunta4: '' });
 
-  const handleClick = ({ target: { id, value }}) => {
-    setAnswers({ ...answers, [id]: value })
-  }
+  const handle = (event) => {
+    event.preventDefault();
+    const { target: { id, value } } = event; 
+    setAnswers({ ...answers, [id]: value });
+  };
 
   return (
-    <div>
-      <Question1n2 number={ 1 } text={ questionOne } handle={ handleClick } answers={ answers } />
-      <Question1n2 number={ 2 } text={ questionTwo } handle={ handleClick } answers={ answers } />
-      <Question3 handle={ handleClick }/>
-    </div>
+    <form>
+      { console.log('teset') }
+      <Question1n2 number={ 'Pergunta1' } text={ questionOne } handle={ handle } answers={ answers } />
+      <Question1n2 number={ 'Pergunta2' } text={ questionTwo } handle={ handle } answers={ answers } />
+      <Question3 handle={ handle }/>
+      <Question4 text={ answers[4] } handle={ handle } />
+      <button disabled={ true }>Enviar</button>
+    </form>
   );
 }
