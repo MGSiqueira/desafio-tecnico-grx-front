@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import api from "../helper/api";
 import Question1n2 from "./Question1n2";
 import Question3 from "./Question3";
 import Question4 from "./Question4";
@@ -24,6 +25,10 @@ export default function Form() {
     setDisabled(false);
   };
 
+  const submitForm = () => {
+    api.post('/answers', answers);
+  };
+
   useEffect(() => { validateForm(); }, [answers]);
 
   return (
@@ -32,7 +37,7 @@ export default function Form() {
       <Question1n2 number={ 'Pergunta2' } text={ questionTwo } handle={ handle } answers={ answers } />
       <Question3 handle={ handle }/>
       <Question4 text={ answers[4] } handle={ handle } />
-      <button disabled={ disabled }>Enviar</button>
+      <button disabled={ disabled } onClick={ submitForm }>Enviar</button>
     </form>
   );
 }

@@ -20,7 +20,7 @@ export default function Question4({ text, handle }) {
       <label>
         <p>Por favor, justifique a resposta anterior:</p>
         <textarea id={ 'Pergunta4' } value={ text } onChange={ handleChange } />
-        <p style={ { display:"inline", color:`${countColor}` }}>{ `${wordCount}/200`}</p>
+        <p style={ { color:`${countColor}` }}>{ `${wordCount}/200`}</p>
       </label>
     </div>
   );
