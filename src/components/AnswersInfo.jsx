@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../helper/api";
+import { isolateQnty, sumQnty } from "../helper/formatQnty";
 
 export default function AnswersInfo() {
   const [apiInfo, setApiInfo] = useState();
@@ -11,7 +12,9 @@ export default function AnswersInfo() {
 
   useEffect(() => { getInfo(); }, []);
 
+  if (apiInfo === undefined) return <div>Carregando</div>;
+  if (apiInfo === '') return <div>Sem respostas salvas</div>
   return (
-    console.log(apiInfo, 'aqui')
-  )
-}
+      console.log(Object.entries(sumQnty(isolateQnty(apiInfo))))
+  );
+};
