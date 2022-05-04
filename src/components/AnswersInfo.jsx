@@ -15,6 +15,17 @@ export default function AnswersInfo() {
   if (apiInfo === undefined) return <div>Carregando</div>;
   if (apiInfo === '') return <div>Sem respostas salvas</div>
   return (
-      console.log(Object.entries(sumQnty(isolateQnty(apiInfo))))
+    <div>
+      { Object.entries(sumQnty(isolateQnty(apiInfo)))
+        .sort((a, b) => b[1] - a[1])
+        .map((item, i) => (
+          <div>
+            <div key={ item[0] }>{ item[0] }</div>
+            <div key={ i }>{ item[1] }</div>
+          </div>
+          )
+        )
+      }
+    </div>
   );
 };
