@@ -12,7 +12,7 @@ export default function Question4({ text, handle }) {
 
   const validateLength = (text) => {
     if (text.length < 15 || text.length > 200) return setCountColor('red');
-    setCountColor('blue');
+    setCountColor('');
   }
 
   return (

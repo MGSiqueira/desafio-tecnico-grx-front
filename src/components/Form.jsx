@@ -3,6 +3,7 @@ import api from "../helper/api";
 import Question1n2 from "./Question1n2";
 import Question3 from "./Question3";
 import Question4 from "./Question4";
+import './css/Form.css';
 
 const questionOne = 'Você se considera bom em lógica?';
 const questionTwo = 'Gosta de aprender com desafios?';
