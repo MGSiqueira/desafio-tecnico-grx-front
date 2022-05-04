@@ -1,0 +1,28 @@
+.result-container {
+  margin-left: 50px;
+}
+
+.total-div {
+  margin-bottom: 15px;
+}
+
+.result-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.qnty-container {
+  margin-right: 5px;
+}
+
+.percentage-container {
+  margin-left: 5px;
+}
+
+.values {
+  border-radius: 5px;
+  background-color: rgb(175, 175, 175);
+  margin-top: 2px;
+  padding: 15px ;
+}

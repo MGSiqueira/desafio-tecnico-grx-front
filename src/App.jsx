@@ -6,8 +6,10 @@ function App() {
   return (
     <div className="App">
       <h1>Desafio Coleta - GRX</h1>
-      <Form />
-      <AnswersInfo />
+      <div className='container-content'>
+        <Form />
+        <AnswersInfo />
+      </div>
     </div>
   );
 }
