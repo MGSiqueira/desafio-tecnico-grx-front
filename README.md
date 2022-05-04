@@ -15,7 +15,7 @@
 
 A etapa mais desafiadora foi desenvolver a lógica para montar o display da quantidade de respostas, devido ao processo de ter que separar as quantidades das perguntas em si, foi concerteza a etapa que mais me demandou tempo e reciocínio.
 
-### Etapas faltates
+### Etapas faltantes
 
 Ficou faltando colocar os nomes certos no display das quantidades e porcentagens das respostas.
 
